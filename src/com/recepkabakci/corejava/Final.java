@@ -28,7 +28,7 @@ public class Final {
 	        String str2 = scanner.nextLine();
 	        str1 = "null".equalsIgnoreCase(str1) ? null : str1;
 	        str2 = "null".equalsIgnoreCase(str2) ? null : str2;
-
+	        scanner.close();
 	        System.out.println(concatStrings(str1, str2));
 	    }
 }
