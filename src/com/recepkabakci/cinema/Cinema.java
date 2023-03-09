@@ -12,9 +12,19 @@ class Seat {
     }
 }
 
-class AlreadyTakenSeatException extends Exception {}
+class AlreadyTakenSeatException extends Exception {
 
-class NonExistingSeatException extends Exception {}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;}
+
+class NonExistingSeatException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;}
 
 public class Cinema {
     private final int rows;
@@ -99,8 +109,12 @@ public class Cinema {
         if (row < 1 || row > rows || col < 1 || col > cols) {
             throw new NonExistingSeatException();
         }
+        
+
 
         return new Seat(row, col);
+       
+
     }
 
     private void buySeat() {
@@ -186,6 +200,8 @@ public class Cinema {
                 default:
                     throw new RuntimeException(String.format("unknown menu command %d", input));
             }
+            scanner.close();
+
         }
     }
 
@@ -200,6 +216,7 @@ public class Cinema {
 
         System.out.println();
 
+        scanner.close();
         return new Cinema(rows, cols);
     }
 
