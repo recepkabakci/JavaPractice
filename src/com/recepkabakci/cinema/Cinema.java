@@ -104,6 +104,7 @@ public class Cinema {
         System.out.println("Enter a seat number in that row:");
         int col = scanner.nextInt();
 
+        scanner.close();
         System.out.println();
 
         if (row < 1 || row > rows || col < 1 || col > cols) {
@@ -113,7 +114,6 @@ public class Cinema {
 
 
         return new Seat(row, col);
-       
 
     }
 

@@ -2,9 +2,9 @@ package com.recepkabakci.corejava;
 
 
 
-import java.util.HashMap;
+
 import java.util.LinkedHashSet;
-import java.util.Map;
+
 
 
 public class AvgNum {
